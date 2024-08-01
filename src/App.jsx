@@ -56,11 +56,12 @@ const App = () => {
       >
         Search
       </button>
-      {loading && <p style={{ color: "black" }}>Loading State</p>}
+      {loading && <p style={{ color: "black" }}>Loading data...</p>}
       {error && <p style={{ color: "black " }}>{error}</p>}
       {weather && (
         <div className="weather-cards" style={{ display: "flex", gap: 20 }}>
           <div
+            className="weather-card"
             style={{
               color: "black",
               width: "300px",
@@ -77,7 +78,6 @@ const App = () => {
                 display: "flex",
                 gap: 10,
                 flexDirection: "column",
-
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -85,10 +85,11 @@ const App = () => {
               <span style={{ fontWeight: 700, fontSize: "20px" }}>
                 Temperature
               </span>
-              <div>{weather.current.temp_c}°C</div>{" "}
+              <div>{weather.current.temp_c}°C</div>
             </p>
           </div>
           <div
+            className="weather-card"
             style={{
               color: "black",
               width: "300px",
@@ -105,18 +106,18 @@ const App = () => {
                 display: "flex",
                 gap: 10,
                 flexDirection: "column",
-
                 justifyContent: "center",
                 alignItems: "center",
               }}
             >
               <span style={{ fontWeight: 700, fontSize: "20px" }}>
                 Humidity
-              </span>{" "}
-              <div>{weather.current.humidity}%</div>{" "}
+              </span>
+              <div>{weather.current.humidity}%</div>
             </p>
           </div>
           <div
+            className="weather-card"
             style={{
               color: "black",
               width: "300px",
@@ -133,7 +134,6 @@ const App = () => {
                 display: "flex",
                 gap: 10,
                 flexDirection: "column",
-
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -145,6 +145,7 @@ const App = () => {
             </p>
           </div>
           <div
+            className="weather-card"
             style={{
               color: "black",
               width: "300px",
@@ -161,19 +162,17 @@ const App = () => {
                 display: "flex",
                 gap: 10,
                 flexDirection: "column",
-
                 justifyContent: "center",
                 alignItems: "center",
               }}
             >
               <span style={{ fontWeight: 700, fontSize: "20px" }}>
                 Wind Speed
-              </span>{" "}
+              </span>
               <div>{weather.current.wind_kph} kph</div>
             </p>
           </div>
         </div>
-        // </div>
       )}
     </div>
   );
