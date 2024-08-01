@@ -45,13 +45,21 @@ const App = () => {
         onChange={(e) => setCity(e.target.value)}
         placeholder="Enter city name"
       />
-      <button onClick={fetchWeather}>Search</button>
+      <button
+        onClick={fetchWeather}
+        style={{
+          background: "red",
+          outline: "0px",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
+        Search
+      </button>
       {loading && <p style={{ color: "black" }}>Loading data…</p>}
       {error && <p style={{ color: "black " }}>{error}</p>}
       {weather && (
         <div className="weather-cards" style={{ display: "flex", gap: 20 }}>
-          {/* <div className="weather-card"> */}
-          {/* <h3>{weather.location.name}</h3> */}
           <div
             style={{
               color: "black",
