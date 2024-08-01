@@ -56,7 +56,7 @@ const App = () => {
       >
         Search
       </button>
-      {loading && <p style={{ color: "black" }}>Loading data…</p>}
+      {loading && <p style={{ color: "black" }}>Loading State</p>}
       {error && <p style={{ color: "black " }}>{error}</p>}
       {weather && (
         <div className="weather-cards" style={{ display: "flex", gap: 20 }}>
