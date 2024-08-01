@@ -63,7 +63,7 @@ const App = () => {
           <div
             style={{
               color: "black",
-              width: "200px",
+              width: "300px",
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
               height: "150px",
               display: "flex",
@@ -72,15 +72,26 @@ const App = () => {
               flexDirection: "row",
             }}
           >
-            <p>
-              Temperature:
+            <p
+              style={{
+                display: "flex",
+                gap: 10,
+                flexDirection: "column",
+
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <span style={{ fontWeight: 700, fontSize: "20px" }}>
+                Temperature
+              </span>
               <div>{weather.current.temp_c}°C</div>{" "}
             </p>
           </div>
           <div
             style={{
               color: "black",
-              width: "200px",
+              width: "300px",
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
               height: "150px",
               display: "flex",
@@ -89,14 +100,26 @@ const App = () => {
               flexDirection: "row",
             }}
           >
-            <p>
-              Humidity: <div>{weather.current.humidity}%</div>{" "}
+            <p
+              style={{
+                display: "flex",
+                gap: 10,
+                flexDirection: "column",
+
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <span style={{ fontWeight: 700, fontSize: "20px" }}>
+                Humidity
+              </span>{" "}
+              <div>{weather.current.humidity}%</div>{" "}
             </p>
           </div>
           <div
             style={{
               color: "black",
-              width: "200px",
+              width: "300px",
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
               height: "150px",
               display: "flex",
@@ -105,15 +128,26 @@ const App = () => {
               flexDirection: "row",
             }}
           >
-            <p>
-              Condition:
+            <p
+              style={{
+                display: "flex",
+                gap: 10,
+                flexDirection: "column",
+
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <span style={{ fontWeight: 700, fontSize: "20px" }}>
+                Condition
+              </span>
               <div>{weather.current.condition.text}</div>
             </p>
           </div>
           <div
             style={{
               color: "black",
-              width: "200px",
+              width: "300px",
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
               height: "150px",
               display: "flex",
@@ -122,8 +156,20 @@ const App = () => {
               flexDirection: "row",
             }}
           >
-            <p>
-              Wind Speed: <div>{weather.current.wind_kph} kph</div>
+            <p
+              style={{
+                display: "flex",
+                gap: 10,
+                flexDirection: "column",
+
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <span style={{ fontWeight: 700, fontSize: "20px" }}>
+                Wind Speed
+              </span>{" "}
+              <div>{weather.current.wind_kph} kph</div>
             </p>
           </div>
         </div>
